@@ -25,7 +25,7 @@ signal.signal(signal.SIGINT, user_interrupt)
 # Initial setup process
 
 if not os.path.exists('apikey.json'):
-    print("***   NASA Explorer Inital Setup  ***")
+    print("***  NASA Explorer Inital Setup  ***")
     print("")
     print("This regularly accesses the NASA API to function.")
     print("You must register for an API key at https://api.nasa.gov/.")
