@@ -345,7 +345,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             print(apod['title'])
             print(f"\033[2;39m{apod['date']}\033[0m")
             print("")
-            desc = textwrap.fill(apod['explanation'], width=300)
+            desc = textwrap.fill(apod['explanation'])
             print(desc)
             print("")
             print(apod['url'])
