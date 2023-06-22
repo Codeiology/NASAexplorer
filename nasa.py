@@ -212,6 +212,7 @@ These modules are currently available:
                 print(f"JSON value entry for inputted sol: {manifest['photo_manifest']['photos']}")
             else:
                 print("Manifest for {rover} could not be found or was not retrieved correctly!")
+            input("Press enter to continue...")
         elif manifor1 == "pic":
             print("")
             print('''
@@ -250,6 +251,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
                 print("\033[1;31mNo images found for your query!\033[0m")
         else:
             print("Invalid.")
+        input("Press enter to continue... ")
             
     # UX for Imange and Video library searcher
             
@@ -276,6 +278,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
                             print(json.dumps(item, indent=4))
                 else:
                     print(f"Failed to get search results. Status code: {response.status_code}")
+        input("Press enter to continue...")
         
     # UX for EPIC
 
