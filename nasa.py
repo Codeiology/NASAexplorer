@@ -241,7 +241,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
                 while True:
                     viewurl = input("Image URL to view ('exit' to exit module): ")
                     if viewurl == "exit":
-                        image.close()
+                        Image.close()
                         break
                     else:
                         response = requests.get(viewurl)
