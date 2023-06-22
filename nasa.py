@@ -251,7 +251,6 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
                 print("\033[1;31mNo images found for your query!\033[0m")
         else:
             print("Invalid.")
-        input("Press enter to continue... ")
             
     # UX for Imange and Video library searcher
             
