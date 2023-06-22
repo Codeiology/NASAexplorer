@@ -176,6 +176,7 @@ These modules are currently available:
 2. NASA image and video library
 3. EPIC (Earth Polychromatic Imaging Camera)
 4. Astronomy Picture of the day
+5. DONKI astronomy notifications
     '''
     print(apichoices)
     apichoice = input("Choose a number: ")
@@ -363,6 +364,34 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             image.show()
         else:
             print(f"Failed to retrive APOD. Status code: {response.status_code}")
+
+    # UX for DONKI
+    
+    elif apichoice == "5":
+        print("")
+        print("DONKI")
+        print("")
+        startdate = input("Start day (YYYY-MM-DD) for notifications: ")
+        endate = input("End day (YYYY-MM-DD) for notifications: ")
+        print("")
+        print("Fetching DONKI notifications...")
+        print("")
+        url = f"https://api.nasa.gov/DONKI/notifications?startDate={startdate}&endDate={endate}&type=all&api_key={key}"
+        response = requests.get(url)
+        notifs = response.json()
+        for notif in notifs:
+            print("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████")
+            print("")
+            print(f"Issue type: {notif['messageType']}")
+            print(f"Message ID: {notif['messageID']}")
+            print(f"URL: {notif['messageURL']}")
+            print(f"Time Issued: {notif['messageIssueTime']}")
+            print("")
+            desc = textwrap.fill(notif['messageBody'], width=300) # Adjust the width to fit your terminal!
+            print(desc)
+        print("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████")
+        print("\n\n\n")
+        input("Hit enter to continue...")
 
 # End it with the handler ;)
 
