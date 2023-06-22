@@ -13,7 +13,7 @@ A user friendly program that can interact with NASA API! Astronomy picture of th
 
 `python3 nasa.py`
 
-It will make you first make an account with the NASA API to get an API key, but after that, everything will work fine!
+It will make you first make an account with the NASA API to get an API key, but after that, everything will work fine! (Make sure your terminal supports ANSI escape codes)
 
 # Features
 
