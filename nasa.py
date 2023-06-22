@@ -69,7 +69,7 @@ def getrovermanifest(rover_name, sol=None):
             manifest["photo_manifest"]["photos"] = filtered_entries
         return manifest
     else:
-        print("Failed to retrieve manifest.")
+        print(f"Failed to retrieve manifest. Status code: {response.status_code}")
         return None
 def getroverpics(sol, rover, cam):
     if cam == "all":
@@ -91,7 +91,7 @@ def getdatesnat():
         dates = response.json()
         return dates
     else:
-        print("Failed to fetch available dates.")
+        print(f"Failed to fetch available dates. Status code: {response.status_code}")
         return None
 def getdatesen():
     url = f"https://api.nasa.gov/EPIC/api/enhanced/available?api_key={key}"
@@ -100,7 +100,7 @@ def getdatesen():
         dates = response.json()
         return dates
     else:
-        print("Failed to fetch available dates.")
+        print(f"Failed to fetch available dates. Status code: {response.status_code}")
         return None
 def getimageidentnat(date):
     url = f"https://api.nasa.gov/EPIC/api/natural/date/{date}?api_key={key}"
@@ -109,7 +109,7 @@ def getimageidentnat(date):
         images = response.json()
         return images
     else:
-        print("Failed to fetch EPIC image.")
+        print(f"Failed to fetch EPIC image. Status code: {response.status_code}")
         return None
 def getimageidenten(date):
     url = f"https://epic.gsfc.nasa.gov/api/enhanced/date/{date}"
