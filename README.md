@@ -1,3 +1,7 @@
+<p align="center">
+ <img alt="NASA_logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/a3/NASA_Worm_logo.svg/508px-NASA_Worm_logo.svg.png?20200430071140" height="140" />
+</p>
+
 # NASAexplorer
 A user friendly program that can interact with NASA API! Astronomy picture of the day, latest pictures of the earth, and even Mars rover pics! new APIs will be added soon.
 
