@@ -22,7 +22,7 @@ def user_interrupt(signal, frame):
     sys.exit()
 signal.signal(signal.SIGINT, user_interrupt)
 
-# Setup process
+# Initial setup process
 
 if not os.path.exists('apikey.json'):
     print("***   NASA Explorer Inital Setup  ***")
@@ -139,7 +139,10 @@ while True:
     
 # Clear screen
 
-os.system('cls' if os.name == 'nt' else 'clear')
+    os.system('cls' if os.name == 'nt' else 'clear')
+    sys.stdout.write('\033[2J')
+    sys.stdout.write('\033[H')
+    sys.stdout.flush()
 
 # Show logo and disclaimer
 
