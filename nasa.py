@@ -387,7 +387,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             print(f"URL: {notif['messageURL']}")
             print(f"Time Issued: {notif['messageIssueTime']}")
             print("")
-            desc = textwrap.fill(notif['messageBody'], width=150) # Adjust the width to fit your terminal!
+            desc = textwrap.fill(notif['messageBody'], width=150, replace_whitespace=False) # Adjust the width to fit your terminal!
             print(desc)
         print("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████")
         print("\n\n\n")
