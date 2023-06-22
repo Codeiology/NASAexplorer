@@ -134,9 +134,6 @@ def print_data_values(json_data):
 # Clear screen
 
 os.system('cls' if os.name == 'nt' else 'clear')
-sys.stdout.write('\033[2J')
-sys.stdout.write('\033[H')
-sys.stdout.flush()
 
 # Initiate interactive loop
 
