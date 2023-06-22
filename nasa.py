@@ -353,11 +353,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             print("")
             response = requests.get(apod['url'])
             image = Image.open(BytesIO(response.content))
-            print("Showing photo in 3...")
-            time.sleep(1)
-            print("2...")
-            time.sleep(1)
-            print("1...")
+            input("Hit enter to show picture...")
             image.show()
         else:
             print(f"Failed to retrive APOD. Status code: {response.status_code}")
