@@ -42,12 +42,12 @@ if not os.path.exists('apikey.json'):
     sys.exit()
 else:
     with open('apikey.json', 'r') as file:
-        varval = json.load(file)
+        var_val = json.load(file)
         
 # Register API key
 
 global key
-key = varval['api_key']
+key = var_val['api_key']
 
 # Initialize functions
 
