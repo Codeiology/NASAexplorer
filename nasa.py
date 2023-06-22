@@ -8,6 +8,7 @@ from PIL import Image
 from io import BytesIO
 import time
 import signal
+import textwrap
 
 # Initialize KeyboardInterrupt handler
 
@@ -344,7 +345,8 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             print(apod['title'])
             print(f"\033[2;39m{apod['date']}\033[0m")
             print("")
-            print(apod['explanation'])
+            desc = textwrap.fill(apod['explanation'], width=300)
+            print(desc)
             print("")
             print(apod['url'])
             copyright1 = apod['copyright'].replace('\n', '')
