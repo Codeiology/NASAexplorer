@@ -132,13 +132,14 @@ def print_data_values(json_data):
                 print_data_values(v)
     else:
         pass
-# Clear screen
-
-os.system('cls' if os.name == 'nt' else 'clear')
 
 # Initiate interactive loop
 
 while True:
+    
+# Clear screen
+
+os.system('cls' if os.name == 'nt' else 'clear')
 
 # Show logo and disclaimer
 
