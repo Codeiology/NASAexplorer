@@ -38,7 +38,7 @@ if not os.path.exists('apikey.json'):
     }
     with open('apikey.json', 'w') as file:
         json.dump(var_val, file)
-    print("Done! Exiting...")
+    print("Done! Exiting (Run the program again to boot with the API key defined)... ")
     sys.exit()
 else:
     with open('apikey.json', 'r') as file:
