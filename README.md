@@ -26,7 +26,3 @@ Programatically showing pictures (No video support yet, but you can do that with
 Custom JSON parsers!
 
 Soon more!
-
-# Binaries
-
-You can also download a binary package, but it might be much slower and have unexpected errors.
