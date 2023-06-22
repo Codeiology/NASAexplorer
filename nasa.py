@@ -160,7 +160,7 @@ while True:
   ::  The National Aeronautics & Space Administration    ::
   ::                                                     ::
   :::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-
+(ASCII art from Telehack)
 (Press CTRL + C to exit at any time)
 
 Coded by Codeiology on GitHub
