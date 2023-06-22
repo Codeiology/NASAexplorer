@@ -27,6 +27,6 @@ NASA Image and Video Library API interaction
 
 Programatically showing pictures (No video support yet, but you can do that with a browser)
 
-Custom JSON parsers!
+DONKI (The Space Weather Database Of Notifications, Knowledge, Information) Daily notifications added!
 
 Soon more!
