@@ -211,12 +211,12 @@ These modules are currently available:
             print('''
 Cameras:                                Rovers have that have them
 
-                                        Curiosity   Opportunity   Spirit
-FHAZ (Front Hazard Avoidance Camera)    YES         YES           YES
+Name:                                   Curiosity   Opportunity   Spirit   Perseverance
+FHAZ (Front Hazard Avoidance Camera)    YES         YES           YES         
 RHAZ (Rear Hazard Avoidance Camera)     YES         YES           YES
 MAST (Mast Camera)                      YES         NO            NO
-CHEMCAM (Chemistry and Camera Complex)  YES         NO            NO
-MAHLI (Mars Hand Lens Imager)           YES         NO            NO
+CHEMCAM (Chemistry and Camera Complex)  YES         NO            NO       (No camera specification for API
+MAHLI (Mars Hand Lens Imager)           YES         NO            NO       supported yet. Just 'all'.)
 MARDI (Mars Descent Imager)             YES         NO            NO
 NAVCAM (Navigation Camera)              YES         YES           YES
 PANCAM (Panoramic Camera)               NO          YES           YES
@@ -227,7 +227,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
             sol = input("Max sol? (number): ")
             cam = input("Camera (Type, 'all' to show all cameras)? ").lower()
             picdatas = getroverpics(sol, rover, cam)
-            if picdatas:
+            if picdatas != None:
                 print(f"Photos taken up to sol {sol} by rover {rover}: ")
                 for picdata in picdatas["photos"]:
                     print(picdata["img_src"])
