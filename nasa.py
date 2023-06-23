@@ -252,7 +252,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
         else:
             print("Invalid.")
             
-    # UX for Imange and Video library searcher
+    # UX for Image and Video library searcher
             
     elif apichoice == "2":
         print("")
@@ -278,7 +278,50 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
                 else:
                     print(f"Failed to get search results. Status code: {response.status_code}")
         input("Press enter to continue...")
-        
+
+#
+# EXPERIMENTAL CODE SNIPPET PARSING OUPUT JSON. CURRENT ISSUE: GLITCHES AND QUITS THE PROGRAM AFTER THE RESULTS HAVE ENDED.
+#
+# UX for image and video library searcher
+#
+#      elif apichoice == "2":
+#       print("")
+#        print("NASA Image and Video Library")
+#        print("")
+#        print("Search all images and videos!")
+#        print("")
+#        while True:
+#            query1 = input("Search query ('exit' to exit module): ")
+#            query = query1.replace(" ", "+")
+#            if query1 == "exit":
+#                break
+#            else:
+#                searchurl = f"https://images-api.nasa.gov/search?q={query}"
+#                response = requests.get(searchurl)
+#               results = response.json()
+#               if response.status_code == 200:
+#                    for collection in results.get('collection', {}).get('items', []):
+#                        for item in collection.get('data', []):
+#                            print("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████")
+#                            print(f"\nCenter: {item['center']}")
+#                           print(f"Title: {item['title']}")
+#                           print(f"NASA ID: {item['nasa_id']}")
+#                            print(f"Posted at {item['date_created']}")
+#                            print(f"Type: {item['media_type']}")
+#                            print("\n\n")
+#                            desc = textwrap.fill(item['description'], width=150, replace_whitespace=False)
+#                            print(desc)
+#                        for item in collection.get('links', []):
+#                            print("\n")
+#                            if "render" and "href" and "rel" in item:
+#                                print(f"{item['render']}: {item['href']} \033[2;39m({item['rel']})\033[0m\n")
+#                            elif "album" in item:
+#                                print(f"Album: {item['album']}\n")
+#                    print("██████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████████")
+#                else:
+#                    print(f"Failed to get search results. Status code: {response.status_code}")
+#        input("Press enter to continue... ")
+
     # UX for EPIC
 
     elif apichoice == "3":
