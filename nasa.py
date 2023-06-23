@@ -285,7 +285,7 @@ MINITES (Thermal Emission Spectrometer) NO          YES           YES
 # UX for image and video library searcher
 #
 #      elif apichoice == "2":
-#       print("")
+#        print("")
 #        print("NASA Image and Video Library")
 #        print("")
 #        print("Search all images and videos!")
